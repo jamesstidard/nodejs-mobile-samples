@@ -17,9 +17,18 @@
 
 - (void)startNode {
     NSString* srcPath = [[NSBundle mainBundle] pathForResource:@"nodejs-project/main.js" ofType:@""];
+    
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSURL* workDir = [fileManager temporaryDirectory];
+    NSURL* readmePath = [workDir URLByAppendingPathComponent:@"README.md"];
+    [fileManager createFileAtPath:[readmePath absoluteString]
+                         contents:[@"# Hello Vuepress" dataUsingEncoding:NSUTF8StringEncoding]
+                       attributes:nil];
+    
     NSArray* nodeArguments = [NSArray arrayWithObjects:
                                 @"node",
                                 srcPath,
+                                [workDir path],
                                 nil
                                 ];
     [NodeRunner startEngineWithArguments:nodeArguments];
