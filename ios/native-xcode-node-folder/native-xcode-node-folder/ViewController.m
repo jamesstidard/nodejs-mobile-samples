@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
+#import <WebKit/WebKit.h>
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *myButton;
-@property (weak, nonatomic) IBOutlet UITextView *myTextView;
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
+
 
 - (IBAction)myButtonAction:(id)sender;
 @end
@@ -24,14 +27,8 @@
 
 - (IBAction)myButtonAction:(id)sender
 {
-    NSString *localNodeServerURL = @"http:/127.0.0.1:3000/";
-    NSURL  *url = [NSURL URLWithString:localNodeServerURL];
-    NSString *versionsData = [NSString stringWithContentsOfURL:url];
-    if (versionsData)
-    {
-        [_myTextView setText:versionsData];
-    }
-    
+    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/"];
+    [self.webView loadRequest: [NSURLRequest requestWithURL: url]];
 }
 
 - (void)didReceiveMemoryWarning {
