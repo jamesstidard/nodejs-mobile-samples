@@ -25,12 +25,7 @@
                          contents:[@"# Hello Vuepress" dataUsingEncoding:NSUTF8StringEncoding]
                        attributes:nil];
     
-    NSArray* nodeArguments = [NSArray arrayWithObjects:
-                                @"node",
-                                srcPath,
-                                [workDir path],
-                                nil
-                                ];
+    NSArray* nodeArguments = [NSArray arrayWithObjects: @"node", srcPath, [workDir path], nil];
     [NodeRunner startEngineWithArguments:nodeArguments];
 }
 

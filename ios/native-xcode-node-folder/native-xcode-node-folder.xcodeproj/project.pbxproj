@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A60F42121792D590055E79E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A60F42021792D590055E79E /* WebKit.framework */; };
 		33C0B28A20512E17006376A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0B28920512E17006376A9 /* AppDelegate.m */; };
 		33C0B28D20512E17006376A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C0B28C20512E17006376A9 /* ViewController.m */; };
 		33C0B29020512E17006376A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33C0B28E20512E17006376A9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A60F42021792D590055E79E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		33C0B28520512E17006376A9 /* native-xcode-node-folder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "native-xcode-node-folder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C0B28820512E17006376A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33C0B28920512E17006376A9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A60F42121792D590055E79E /* WebKit.framework in Frameworks */,
 				33C0B29F20512ECA006376A9 /* NodeMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A60F41F21792D590055E79E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A60F42021792D590055E79E /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33C0B27C20512E17006376A9 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +80,7 @@
 				33C0B29E20512ECA006376A9 /* NodeMobile.framework */,
 				33C0B28720512E17006376A9 /* native-xcode-node-folder */,
 				33C0B28620512E17006376A9 /* Products */,
+				1A60F41F21792D590055E79E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
